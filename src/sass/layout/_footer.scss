@@ -16,8 +16,12 @@
     }
 
     .logo {
-        @include flex-all(column, center, center);
         margin: 1rem 0 2rem;
+
+        a { 
+            @include flex-all(column, center, center);
+            text-decoration: none; 
+        }
 
         &__name {            
             text-align: center;
@@ -37,6 +41,7 @@
                     weight: 300;
                 }
                 letter-spacing: 13px;
+                color: $c-text;
             }
         }
     }

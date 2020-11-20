@@ -3,6 +3,8 @@
 }
 
 .primary-menu {
+    @include hide-large;
+
     &__list { @include stripped-list; }
 
     a { 
