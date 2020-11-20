@@ -1,0 +1,65 @@
+.site-header {
+    background-color: $c-white;
+
+    .site-title { 
+        position: relative;
+        z-index: 9;
+        
+        &__inner { text-align: center;  }
+    }
+
+    .logo {
+        @include flex-all(column, center, center);
+
+        &__name {
+            text-align: center;
+            line-height: 1;
+
+            .first-line { 
+                @include scale-font($small-ratio: .5, $final-size: 4.5rem); 
+                display: block;
+                color: $primary-color;
+            }
+
+            .second-line {
+                font: {
+                    size: 1.063rem;
+                    weight: 300;
+                }
+                letter-spacing: 1.156rem;
+            }
+        }
+    }
+    
+    @include respond-to($vp-max) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 836px;
+        background: {
+            color: transparent;
+            image: url(../images/bg-header.png);
+            repeat: no-repeat;
+            position: left top;
+        }
+
+        &__row {
+            &--inner { @include flex-all; }
+        }
+
+        .site-title { 
+            flex: 1; 
+
+            &__inner {
+                display: inline-block;
+                margin: 5.625rem 0 0 6.875rem;
+            }
+        }
+
+        .site-menu { 
+            width: 936px; 
+            margin-right: 6.875rem;
+        }
+    }
+}
